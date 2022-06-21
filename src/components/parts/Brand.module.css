@@ -1,0 +1,14 @@
+.brand {
+  font-size: 38px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: var(--color-4);
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .brand {
+    margin-bottom: 0px;
+  }
+}

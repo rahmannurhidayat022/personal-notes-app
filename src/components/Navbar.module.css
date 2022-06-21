@@ -6,37 +6,11 @@
   background-color: var(--color-2);
 }
 
-.brand {
-  font-size: 38px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: var(--color-4);
-  display: flex;
-  align-items: center;
-}
-
-.search__bar {
-  font-size: 16px;
-  border: 2px solid var(--color-3);
-  color: var(--color-4);
-  border-radius: 10px;
-  padding: 5px 10px;
-  width: 300px;
-  height: 30px;
-}
-
-.search__bar:focus {
-  outline: none;
-}
-
 @media only screen and (min-width: 800px) {
   .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 80px;
-  }
-  .brand {
-    margin-bottom: 0px;
   }
 }
