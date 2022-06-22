@@ -1,0 +1,18 @@
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: var(--color-1);
+  color: #333;
+}
+
+.secondary {
+  background-color: var(--color-2);
+  color: #444;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './AddNote.module.css';
+import Button from './parts/Button';
 
 export default class AddNote extends Component {
   render() {
@@ -17,8 +18,8 @@ export default class AddNote extends Component {
               <textarea className={styles.form__input_textarea} name="desc" id="desc" cols="30" rows="10"/>
             </div>
             <div className={styles.form__action}>
-              <button>Save</button>
-              <button>Reset</button>
+             <Button variant='secondary' >Reset</Button>
+             <Button variant='primary'>Save</Button>
             </div>
           </form>
         </div>

@@ -64,3 +64,13 @@
 .form__input_textarea:focus {
   outline: 3px solid var(--color-1);
 }
+
+.form__action {
+  display: flex;
+  justify-content: end;
+  margin-top: 40px;
+}
+
+.form__action > * {
+  margin-left: 15px;
+}
