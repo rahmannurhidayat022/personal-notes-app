@@ -21,6 +21,7 @@ function AddNote({ saveNote }) {
 
     const data = {
       id,
+      title,
       body: desc,
       createdAt,
       archived: false,

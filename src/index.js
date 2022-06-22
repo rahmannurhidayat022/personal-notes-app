@@ -1,25 +1,14 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const NotesPage = lazy(() => import('./pages/Notes'));
-const ArchivePage = lazy(() => import('./pages/Archive'));
-const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<NotesPage/>}/>
-          <Route path="/archives" element={<ArchivePage/>}/>
-          <Route path="*" element={<NotFoundPage/>}/>
-        </Routes>
-      </Suspense>
-    </Router>
+    <App/>
   </React.StrictMode>
 );
 
