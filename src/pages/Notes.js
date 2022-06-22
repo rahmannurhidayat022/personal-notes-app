@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AddNote from '../components/AddNote'
 import Navbar from '../components/Navbar'
 
 export default class Notes extends Component {
@@ -6,6 +7,7 @@ export default class Notes extends Component {
     return (
       <>
         <Navbar/>
+        <AddNote />
       </>
     )
   }
