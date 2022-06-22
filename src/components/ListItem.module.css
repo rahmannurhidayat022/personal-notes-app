@@ -1,0 +1,30 @@
+.h2 {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+  color: #333
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .h2 {
+    text-align: start;
+  }
+  .box {
+    flex-direction: row;
+  }
+}

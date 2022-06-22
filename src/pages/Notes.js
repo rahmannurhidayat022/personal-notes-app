@@ -1,14 +1,31 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react';
 import AddNote from '../components/AddNote'
+import ListItem from '../components/ListItem'
 import Navbar from '../components/Navbar'
+import getInitialData from '../utils/initialData';
 
-export default class Notes extends Component {
-  render() {
-    return (
-      <>
-        <Navbar/>
-        <AddNote />
-      </>
-    )
+export default function Notes() {
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    const data = getInitialData();
+    setNotes(data);
+  }, []);
+
+  const saveNote = (newData) => {
+    setNotes((prev) => {
+      return [
+        ...prev,
+        newData,
+      ];
+    })
   }
+
+  return (
+    <>
+      <Navbar />
+      <AddNote saveNote={saveNote} />
+      <ListItem notes={notes} />
+    </>
+  )
 }

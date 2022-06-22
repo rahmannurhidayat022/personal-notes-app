@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { generateId } from '../utils/helper';
-import notes from '../utils/initialData';
 import styles from './AddNote.module.css';
 import Button from './parts/Button';
 
-export default function AddNote() {
+export default function AddNote({ saveNote }) {
   const CHAR_LIMIT = 50;
   const [title, setTitle] = useState(''); 
   const [desc, setDesc] = useState('');
@@ -26,7 +25,7 @@ export default function AddNote() {
       archived: false,
     }
     
-    notes.push(data);
+    saveNote(data);
     clearingForm();
   }
 

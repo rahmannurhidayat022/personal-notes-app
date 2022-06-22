@@ -1,4 +1,4 @@
-const notes = [
+const getInitialData = () => [
   {
     id: 1,
     title: "Babel",
@@ -43,4 +43,4 @@ const notes = [
   },
 ];
 
-export default notes;
+export default getInitialData;
