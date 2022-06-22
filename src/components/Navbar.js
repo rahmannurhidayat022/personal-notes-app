@@ -3,11 +3,11 @@ import styles from './Navbar.module.css';
 import Brand from './parts/Brand';
 import Searchbar from './parts/Searchbar';
 
-export default function Navbar() {
+export default function Navbar({ setQuery }) {
   return (
     <div className={styles.navbar}>
       <Brand/>
-      <Searchbar/>
+      <Searchbar setQuery={setQuery} />
     </div>
   )
 }

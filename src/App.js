@@ -7,6 +7,7 @@ const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
   const [notes, setNotes] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const data = getInitialData();
@@ -50,6 +51,8 @@ export default function App() {
             saveNote={saveNote}
             deleteNote={deleteNote}
             changeStatusArchive={changeStatusArchive}
+            query={query}
+            setQuery={setQuery}
           />}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
