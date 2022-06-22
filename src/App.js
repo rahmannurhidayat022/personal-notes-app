@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import getInitialData from './utils/initialData';
 
 const NotesPage = lazy(() => import('./pages/Notes'));
-const ArchivePage = lazy(() => import('./pages/Archive'));
 const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
@@ -52,7 +51,6 @@ export default function App() {
             deleteNote={deleteNote}
             changeStatusArchive={changeStatusArchive}
           />}/>
-          <Route path="/archives" element={<ArchivePage notes={notes} />}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </Suspense>

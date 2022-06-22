@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from './Brand.module.css';
 
-export default class Brand extends Component {
-  render() {
-    return (
-      <div className={styles.brand}>
-        N
-        <img width={'50px'} src="/icons/brand.png" alt="brand logo" />
-        TES
-      </div>
-    )
-  }
+export default function Brand() {
+  return (
+    <div className={styles.brand}>
+      N
+      <img width={'50px'} src="/icons/brand.png" alt="brand logo" />
+      TES
+    </div>
+  )
 }
