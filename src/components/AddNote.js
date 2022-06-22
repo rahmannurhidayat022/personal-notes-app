@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { generateId } from '../utils/helper';
 import styles from './AddNote.module.css';
 import Button from './parts/Button';
+import PropTypes from 'prop-types';
 
-export default function AddNote({ saveNote }) {
+function AddNote({ saveNote }) {
   const CHAR_LIMIT = 50;
   const [title, setTitle] = useState(''); 
   const [desc, setDesc] = useState('');
@@ -46,7 +47,7 @@ export default function AddNote({ saveNote }) {
               className={styles.form__input_textarea} name="desc" id="desc" cols="30" rows="10"/>
           </div>
           <div className={styles.form__action}>
-            <Button type='reset' variant='secondary' >Reset</Button>
+            <Button onClick={clearingForm} type='reset' variant='secondary' >Reset</Button>
             <Button type='submit' variant='primary'>Save</Button>
           </div>
         </form>
@@ -54,3 +55,9 @@ export default function AddNote({ saveNote }) {
     </div>
   )
 }
+
+AddNote.propTypes = {
+  saveNote: PropTypes.func,
+}
+
+export default AddNote;

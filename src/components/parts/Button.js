@@ -8,7 +8,7 @@ function Button({ variant, children, onClick, type }) {
     (variant === "danger" && styles.danger));
 
   return (
-    <button type={type} className={[styles.btn, color].join(' ')}>{children}</button>
+    <button onClick={onClick} type={type} className={[styles.btn, color].join(' ')}>{children}</button>
   )
 }
 

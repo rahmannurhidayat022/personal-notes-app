@@ -21,11 +21,16 @@ export default function Notes() {
     })
   }
 
+  const deleteNote = (id) => {
+    const filtered = notes.filter(item => item.id !== id);
+    setNotes(filtered)
+  }
+
   return (
     <>
       <Navbar />
       <AddNote saveNote={saveNote} />
-      <ListItem notes={notes} />
+      <ListItem notes={notes} deleteNote={deleteNote} />
     </>
   )
 }
