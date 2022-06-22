@@ -8,7 +8,6 @@ const NotFoundPage = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
   const [notes, setNotes] = useState([]);
-  const [archives, setArchives] = useState([]);
 
   useEffect(() => {
     const data = getInitialData();
@@ -29,12 +28,31 @@ export default function App() {
     setNotes(filtered)
   }
 
+  const changeStatusArchive = (id) => {
+    const filtered = notes.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          archived: !item.archived,
+        }
+      }
+
+      return item;
+    });
+    setNotes(filtered);
+  }
+
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<NotesPage notes={notes} saveNote={saveNote} deleteNote={deleteNote} />}/>
-          <Route path="/archives" element={<ArchivePage/>}/>
+          <Route path="/" element={<NotesPage
+            notes={notes}
+            saveNote={saveNote}
+            deleteNote={deleteNote}
+            changeStatusArchive={changeStatusArchive}
+          />}/>
+          <Route path="/archives" element={<ArchivePage notes={notes} />}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </Suspense>

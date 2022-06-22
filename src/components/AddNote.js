@@ -21,8 +21,8 @@ function AddNote({ saveNote }) {
 
     const data = {
       id,
-      title,
-      body: desc,
+      title: title === '' ? 'Ipsum lorem' : title,
+      body: desc === '' ? 'Ipsum lorem capsum lorem Ipsum moreona lola lyati' : desc,
       createdAt,
       archived: false,
     }

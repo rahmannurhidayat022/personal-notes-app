@@ -4,12 +4,12 @@ import ListItem from '../components/ListItem'
 import Navbar from '../components/Navbar'
 import PropTypes from 'prop-types';
 
-function Notes({ notes, deleteNote, saveNote }) {
+function Notes({ notes, deleteNote, saveNote, changeStatusArchive }) {
   return (
     <>
       <Navbar />
       <AddNote saveNote={saveNote} />
-      <ListItem notes={notes} deleteNote={deleteNote} />
+      <ListItem notes={notes} deleteNote={deleteNote} changeStatusArchive={changeStatusArchive} />
     </>
   )
 }
@@ -18,6 +18,7 @@ Notes.propTypes = {
   notes: PropTypes.array,
   deleteNote: PropTypes.func,
   saveNote: PropTypes.func,
+  changeStatusArchive: PropTypes.func,
 }
 
 export default Notes;
