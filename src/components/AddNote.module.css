@@ -43,7 +43,7 @@
   height: 35px;
   font-size: 18px;
   padding: 5px 10px;
-  color: #444;
+  color: #fff;
   background-color: var(--color-3);
 }
 
@@ -57,7 +57,7 @@
   width: 100%;
   font-size: 18px;
   padding: 15px 10px;
-  color: #444;
+  color: #fff;
   background-color: var(--color-3);
 }
 
@@ -73,4 +73,20 @@
 
 .form__action > * {
   margin-left: 15px;
+}
+
+.form__info {
+  color: var(--color-3);
+  margin: 7px 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .card {
+    width: 900px;
+    margin: 30px auto;
+    padding-bottom: 80px;
+  }
+  .form {
+    width: 600px;
+  }
 }

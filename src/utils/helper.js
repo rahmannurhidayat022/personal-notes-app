@@ -1,3 +1,7 @@
+const generateId = () => {
+  return +new Date();
+}
+
 const showFormattedDate = (date) => {
   const options = {
     weekday: "long",
@@ -8,4 +12,4 @@ const showFormattedDate = (date) => {
   return new Date(date).toLocaleDateString("id-ID", options)
 }
 
-export default showFormattedDate;
+export {generateId, showFormattedDate};
